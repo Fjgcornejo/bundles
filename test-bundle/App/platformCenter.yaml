@@ -1,0 +1,45 @@
+---
+createdAt: 1686741881000
+updatedAt: 1686847493000
+id: "MASTER-Realm-2"
+identification: "platformCenter"
+description: "This is a realm provided for the Platform Center Console"
+secret: "changeIt2020"
+user: "administrator"
+appRoles:
+- createdAt: 1686741881000
+  updatedAt: 1686847493000
+  id: "9a3ec3d3-7ca8-4333-8069-00d57f322427"
+  name: "ADMINISTRATOR"
+  description: "Administrator"
+  childRoles: []
+  appUsers: []
+- createdAt: 1686741881000
+  updatedAt: 1686847493000
+  id: "d2af6c0e-93af-40c0-bd7d-4db6f4d2fcd7"
+  name: "PRODUCT_OWNER"
+  description: "Product Owner"
+  childRoles: []
+  appUsers: []
+- createdAt: 1686741881000
+  updatedAt: 1686847493000
+  id: "ceb70e54-88fd-452a-884e-9e6c25bac8d5"
+  name: "DEVELOPER"
+  description: "Developer"
+  childRoles: []
+  appUsers: []
+- createdAt: 1686741881000
+  updatedAt: 1686847493000
+  id: "2b6ced84-df81-4456-aac5-127099caf6df"
+  name: "PROJECT_MANAGER"
+  description: "Project ManagerProject Manager"
+  childRoles: []
+  appUsers: []
+- createdAt: 1686741881000
+  updatedAt: 1686847493000
+  id: "86c78d6e-6950-4007-ae5c-ca0a9c574c39"
+  name: "CONSULTANT"
+  description: "Consultant"
+  childRoles: []
+  appUsers: []
+childApps: []
