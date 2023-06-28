@@ -1,0 +1,59 @@
+---
+createdAt: 1687945523000
+updatedAt: 1687945523000
+id: "MASTER-Ontology-10"
+identification: "AirCOMeter"
+user: "developer"
+jsonSchema:
+  $schema: "http://json-schema.org/draft-04/schema#"
+  title: "AirCOMeter"
+  type: "object"
+  required:
+  - "AirCOMeter"
+  properties:
+    AirCOMeter:
+      type: "string"
+      $ref: "#/datos"
+  datos:
+    description: "Info AirCOMeter"
+    type: "object"
+    required:
+    - "location"
+    - "measure"
+    - "timestamp"
+    properties:
+      location:
+        type: "string"
+      measure:
+        type: "number"
+      timestamp:
+        type: "object"
+        required:
+        - "$date"
+        properties:
+          $date:
+            type: "string"
+            format: "date-time"
+  description: "AirCOMeter"
+  additionalProperties: true
+dataModel: "MASTER-DataModel-5"
+active: true
+contextDataEnabled: true
+rtdbClean: false
+rtdbCleanLapse: "NEVER"
+rtdbToHdb: false
+rtdbToHdbStorage: "MONGO_GRIDFS"
+description: "AirCOMeter"
+metainf: "AirCOMeter"
+ontologyUserAccesses: []
+rtdbDatasource: "MONGO"
+allowsCypherFields: false
+allowsCreateTopic: false
+allowsCreateNotificationTopic: false
+allowsCreateMqttTopic: false
+supportsJsonLd: false
+enableDataClass: false
+public: false
+ontologyKPI: null
+ontologyAI: null
+ontologyTimeSeries: null
