@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+	<pluginGroups>
+	</pluginGroups>
+
+	<!--
+	Esta sección nos permite establecer el proxy si llega a ser necesario.
+	Si estamos en oficina de Indra, lo más seguro es que necesitemos tener activado el proxy de Indra
+	 mediante el siguiente bloque
+	-->
+	<proxies>
+		<proxy>
+			<id>indra-proxy</id>
+			<!-- Esta instrucción nos permitirá activar/desactivar el proxy mediante "false", si lo queremos desactivar o "true" si lo contrario -->
+			<active>false</active>
+			<protocol>http</protocol>
+			<username>cilantrumuser</username>
+			<password>N7mH52p49</password>
+			<host>proxy.indra.es</host>
+			<port>8080</port>
+			<!-- Excepciones del proxy -->
+			<nonProxyHosts>localhost|*.indra.es|127.*</nonProxyHosts>
+		</proxy>
+	</proxies>
+	<!--
+	En este bloque estableceremos el set de credenciales de cada repositorio que usemos	en el fichero pom.xml de nuestros proyectos.
+	El repositorio y su set de credenciales irán asociados por el atributo "id"
+	-->
+	<servers>
+		<!-- A continuación se establecen las credenciales para los repositorios cuyo nombre son los más comunes -->
+		<server>
+			<id>PDT_Release</id>
+			<username>cilantrumuser</username>
+			<password>N7mH52p49N7mH52p49</password>
+		</server>
+		<server>
+			<id>PDT_Snapshot</id>
+			<username>cilantrumuser</username>
+			<password>N7mH52p49N7mH52p49</password>
+		</server>
+		<server>
+			<id>maven-central</id>
+			<username>cilantrumuser</username>
+			<password>N7mH52p49N7mH52p49</password>
+		</server>
+		<server>
+			<id>indra-maven-central</id>
+			<username>cilantrumuser</username>
+			<password>N7mH52p49N7mH52p49</password>
+		</server>
+		<server>
+			<id>indra-public</id>
+			<username>cilantrumuser</username>
+			<password>N7mH52p49N7mH52p49</password>
+		</server>
+		<server>
+			<id>central</id>
+			<username>cilantrumuser</username>
+			<password>N7mH52p49N7mH52p49</password>
+		</server>
+	</servers>
+
+	<mirrors>
+	</mirrors>
+
+	<profiles>
+	</profiles>
+</settings>

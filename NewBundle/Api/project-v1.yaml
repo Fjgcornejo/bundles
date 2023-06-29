@@ -1,0 +1,190 @@
+---
+createdAt: 1687945530000
+updatedAt: 1688052862000
+id: "MASTER-Api-1"
+identification: "project"
+user: "administrator"
+ontology: "MASTER-Ontology-35"
+ssl_certificate: false
+userApiAccesses: []
+numversion: 1
+description: "Vue JS + SB 2 API"
+category: "ALL"
+state: "DEVELOPMENT"
+apiType: "INTERNAL_ONTOLOGY"
+apiOperations:
+- createdAt: 1687945530000
+  updatedAt: 1688052862000
+  id: "6431eaed-a787-4c4d-a479-f2afe64f671a"
+  apiqueryparameters:
+  - createdAt: 1687945530000
+    updatedAt: 1688052862000
+    id: "a4ab063f-fd4c-4509-b6ca-4a1246f796f8"
+    name: "id"
+    dataType: "STRING"
+    description: ""
+    value: ""
+    headerType: "PATH"
+  identification: "project_DELETEID"
+  description: "delete"
+  operation: "DELETE"
+  path: "/{id}"
+- createdAt: 1687945530000
+  updatedAt: 1688052862000
+  id: "10e4714d-5838-4369-9d11-4fc3d9e0ed0b"
+  apiqueryparameters:
+  - createdAt: 1687945530000
+    updatedAt: 1688052862000
+    id: "e0ad91b2-d737-4a77-b479-51e66f332271"
+    name: "id"
+    dataType: "STRING"
+    description: ""
+    value: ""
+    headerType: "PATH"
+  - createdAt: 1687945530000
+    updatedAt: 1688052862000
+    id: "6ec356ed-6ff3-4f79-a744-a72c11079663"
+    name: "body"
+    dataType: "STRING"
+    description: ""
+    value: ""
+    headerType: "BODY"
+  identification: "project_PUT"
+  description: "edit"
+  operation: "PUT"
+  path: "/{id}"
+- createdAt: 1687945530000
+  updatedAt: 1688052862000
+  id: "ec2f0f10-162f-4e75-bb10-2355442cc053"
+  apiqueryparameters:
+  - createdAt: 1687945530000
+    updatedAt: 1688052862000
+    id: "a0009849-52cc-4632-9a3e-9680fb63accc"
+    name: "id"
+    dataType: "STRING"
+    description: ""
+    value: ""
+    headerType: "PATH"
+  identification: "project_GET"
+  description: "getbyid"
+  operation: "GET"
+  path: "/{id}"
+- createdAt: 1687945530000
+  updatedAt: 1688052862000
+  id: "788d1526-3683-4ccd-9172-ed539cffe019"
+  apiqueryparameters:
+  - createdAt: 1687945530000
+    updatedAt: 1688052862000
+    id: "b45e666b-2339-4f30-be90-4df712db19e1"
+    name: "body"
+    dataType: "STRING"
+    description: ""
+    value: ""
+    headerType: "BODY"
+  identification: "project_POST"
+  description: "post"
+  operation: "POST"
+  path: "/"
+- createdAt: 1687945530000
+  updatedAt: 1688052862000
+  id: "b03ebddf-6f89-4ab1-8264-26eb33b0ec70"
+  apiqueryparameters:
+  - createdAt: 1687945530000
+    updatedAt: 1688052862000
+    id: "536b0c8d-f86c-429e-a9e7-6727227ccc4e"
+    name: "pname"
+    dataType: "STRING"
+    description: ""
+    condition: "REQUIRED"
+    headerType: "PATH"
+  - createdAt: 1687945530000
+    updatedAt: 1688052862000
+    id: "2a70bd3f-c2a5-4ba9-904f-8e1c93135588"
+    name: "queryType"
+    dataType: "STRING"
+    description: ""
+    value: "sql"
+    condition: "CONSTANT"
+    headerType: "QUERY"
+  - createdAt: 1687945530000
+    updatedAt: 1688052862000
+    id: "8d3c95e6-218f-4419-89f7-38323f741f81"
+    name: "query"
+    dataType: "STRING"
+    description: ""
+    value: "select p from Project as p where p.features.name={$pname}"
+    condition: "CONSTANT"
+    headerType: "QUERY"
+  - createdAt: 1687945530000
+    updatedAt: 1688052862000
+    id: "a54c3c2f-8c00-4a63-ad4c-d897db93aea6"
+    name: "targetdb"
+    dataType: "STRING"
+    description: ""
+    value: "rtdb"
+    condition: "CONSTANT"
+    headerType: "QUERY"
+  identification: "name"
+  description: "filter by name"
+  operation: "GET"
+  path: "name/{pname}"
+  postProcess: "// data is a string variable containing the query output \nvar dataArray\
+    \ = JSON.parse(data);\ntry{\n  var instance = dataArray[0];\n  instance.id = instance._id;\n\
+    \  delete instance._id;\n  return JSON.stringify(instance);\n}catch(error){ return\
+    \ data;}\n// A string result must be returned\nreturn (JSON.stringify(dataArray));"
+- createdAt: 1687945530000
+  updatedAt: 1688052862000
+  id: "7fd866db-912e-4a3f-8184-7740c13f6b09"
+  apiqueryparameters:
+  - createdAt: 1687945530000
+    updatedAt: 1688052862000
+    id: "8a2c6473-120c-4c08-953a-1056f15445ff"
+    name: "targetdb"
+    dataType: "STRING"
+    description: ""
+    value: "rtdb"
+    condition: "CONSTANT"
+    headerType: "QUERY"
+  - createdAt: 1687945530000
+    updatedAt: 1688052862000
+    id: "20e7da1f-4868-4dbe-af51-30c67b3a4ea6"
+    name: "name"
+    dataType: "STRING"
+    description: ""
+    condition: "REQUIRED"
+    headerType: "PATH"
+  - createdAt: 1687945530000
+    updatedAt: 1688052862000
+    id: "5210ef67-6444-4dda-a42e-9aff0ce10a62"
+    name: "queryType"
+    dataType: "STRING"
+    description: ""
+    value: "sql"
+    condition: "CONSTANT"
+    headerType: "QUERY"
+  - createdAt: 1687945530000
+    updatedAt: 1688052862000
+    id: "b92f8b18-c3a4-49a1-8f3c-4f916dcf19b6"
+    name: "query"
+    dataType: "STRING"
+    description: ""
+    value: "select p from Project as p where p.features.name={$name}"
+    condition: "CONSTANT"
+    headerType: "QUERY"
+  identification: "id"
+  description: "filter by name"
+  operation: "GET"
+  path: "id/{name}"
+  postProcess: "// data is a string variable containing the query output \nvar dataArray\
+    \ = JSON.parse(data);\ntry{\n  var instance = dataArray[0];\n  instance.id = instance._id;\n\
+    \  delete instance._id;\n  return JSON.stringify(instance);\n}catch(error){ return\
+    \ data;}\n// A string result must be returned\nreturn (JSON.stringify(dataArray));"
+- createdAt: 1687945530000
+  updatedAt: 1688052862000
+  id: "e5c30a90-e5f1-4f7b-852b-105c2a3c37d1"
+  apiqueryparameters: []
+  identification: "project_GETAll"
+  description: "all"
+  operation: "GET"
+  path: ""
+public: true
